@@ -1,0 +1,27 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Rimozione margini popup autocomplete*/
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+  padding: 0 0 !important;
+  margin: -1px !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-radius: 0 !important;
+}
+
+/** Color for URL bar, from Evandro (efg) on #gnome-design **/
+.ac-url-text,
+.ac-action-text {
+  font-size: 95% !important;
+  color: gray !important;
+}
+
+.ac-separator[selected="true"],
+.ac-comment[selected="true"],
+.ac-url-text[selected="true"],
+.ac-action-text[selected="true"] {
+  color: #f3f3f3 !important;
+}

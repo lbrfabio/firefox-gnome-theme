@@ -1,0 +1,7 @@
+/*https://bugzilla.mozilla.org/show_bug.cgi?id=1285812*/
+/*https://forum.manjaro.org/t/howto-enable-tab-switching-in-firefox-using-mouse-wheel/39954*/
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+    /* Place bindings.xml in the same folder as userChrome.css */
+    -moz-binding: url("../bindings.xml#tabs-scroll") !important;
+}

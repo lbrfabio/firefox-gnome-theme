@@ -1,0 +1,52 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: ui/arc-gnome*.css ::::: */
+:root:-moz-window-inactive {
+  --toolbar-bgcolor: #e8eaee !important;
+  --panel-separator-color: hsla(210,4%,10%,.05) !important;
+}
+
+/* ::::: ui/csd.css ::::: */
+:-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):-moz-window-inactive {
+  filter: grayscale(1);
+  opacity: .45 !important;
+}
+
+:-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):hover:-moz-window-inactive {
+  filter: grayscale(0) !important;
+  opacity: 0.6 !important;
+}
+
+/* ::::: ui/theme.css ::::: */
+.toolbarbutton-1:not(.tabs-newtab-button):not([disabled=true]):not([checked]):not([open]):-moz-window-inactive {
+  opacity: 0.76 !important;
+  fill-opacity: 1.0 !important;
+}
+
+.urlbar-icon:-moz-window-inactive,
+#identity-box:-moz-window-inactive {
+  opacity: 0.65 !important;
+}
+
+#editBookmarkPanelStarIcon:-moz-window-inactive {
+  opacity: 0.5 !important;
+}
+
+#star-button[starred]:-moz-window-inactive {
+  fill-opacity: 0.45 !important;
+}
+
+#main-window:-moz-window-inactive .tab-throbber,
+#main-window:-moz-window-inactive .tab-icon-image {
+  filter: grayscale(1) !important;
+  opacity: 0.5 !important;
+}
+
+#main-window:-moz-window-inactive .folder-icon {
+  opacity: 0.5 !important;
+  fill-opacity: 0.5!important;
+}

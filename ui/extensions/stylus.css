@@ -1,0 +1,14 @@
+/* Stylus
+ * id: {7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/styl-us/ */
+
+
+#_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("../icons/extensions/stylus.svg") !important;
+  opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+}
+
+/**TODO: cercare di trovare la classe o un attributo che identifica la modalità "stopped\off"*/
+/*#_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("./icons/stylus-off.svg") !important;
+}*/

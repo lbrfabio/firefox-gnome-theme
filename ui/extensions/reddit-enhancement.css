@@ -1,0 +1,18 @@
+/* Reddit Enhancement Suite
+ * id: {jid1-xUfzOsOFlzSOXg@jetpack}
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/reddit-enhancement-suite */
+
+
+#pageAction-panel-jid1-xufzosoflzsoxg_jetpack > .toolbarbutton-icon {
+	list-style-image: url("../icons/extensions/css.svg") !important;
+}
+
+#pageAction-panel-jid1-xufzosoflzsoxg_jetpack[label="Subreddit Style On"] > .toolbarbutton-icon {
+	list-style-image: url("../icons/extensions/css-on.svg") !important;
+}
+
+#pageAction-panel-jid1-xufzosoflzsoxg_jetpack[label="Subreddit Style Off"] > .toolbarbutton-icon {
+	list-style-image: url("../icons/extensions/css-off.svg") !important;
+}
+
+

@@ -1,0 +1,81 @@
+/* root colors */
+#main-window[privatebrowsingmode=temporary]:root {
+  --toolbar-bgcolor: #2f343f !important;
+  --toolbar-border-color: #262a33 !important;
+  --tabstoolbar-bgcolor: #383C4A !important;
+
+  --arc-tab-hover-bgcolor: #3c404e;
+  --arc-tab-selected-bgcolor: #404552;
+
+  --arc-tab-color: #777d88;
+  --arc-tab-hover-color: #a9b0ba;
+  --arc-tab-selected-color: #d3dae3;
+
+  --toolbarbutton-hover-background: #424959 !important;
+  --arc-toolbarbutton-hover-bordercolor: #242831;
+
+  --lwt-toolbarbutton-icon-fill: #afb8c6 !important;
+
+  --urlbar-separator-color: #d8dadf !important;
+
+  --menu-button-separator-color: #494f5b !important;
+}
+
+#main-window[privatebrowsingmode=temporary]:root:-moz-lwtheme-darktext,
+#main-window[privatebrowsingmode=temporary] toolbar:not([brighttext]) {
+  --toolbarbutton-hover-background: #424959 !important;
+  --arc-toolbarbutton-hover-bordercolor: #242831 !important;
+
+  --lwt-toolbarbutton-icon-fill: #afb8c6 !important;
+}
+
+/* root colors for inactive window */
+#main-window[privatebrowsingmode=temporary]:root:-moz-window-inactive,
+#main-window[privatebrowsingmode=temporary]:root:-moz-lwtheme-darktext:-moz-window-inactive,
+#main-window[privatebrowsingmode=temporary] toolbar:not([brighttext]):-moz-window-inactive {
+  --toolbar-bgcolor: #323843 !important;
+}
+
+/* titlebar buttons */
+#main-window[privatebrowsingmode=temporary] :-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):-moz-window-inactive {
+  opacity: .75 !important;
+}
+
+#main-window[privatebrowsingmode=temporary] :-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):hover:-moz-window-inactive {
+  opacity: .85 !important;
+}
+
+
+/* Toolbar buttons */
+#main-window[privatebrowsingmode=temporary] #back-button > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/back-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #forward-button > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/forward-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #home-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/user-home-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #back-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/back-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #forward-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/forward-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #home-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/user-home-active.svg") !important;
+}
+
+/* Toolbar menu button */
+#main-window[privatebrowsingmode=temporary] #PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/menu-badged-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #PanelUI-menu-button.toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/menu-badged-active.svg") !important;
+}

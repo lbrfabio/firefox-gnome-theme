@@ -1,0 +1,12 @@
+/* Stylus
+ * id: {privateTabWE@infocatcher}
+ * URL: https://github.com/Infocatcher/Private_Tab_WE */
+
+
+#privatetabwe_infocatcher-browser-action.webextension-browser-action {
+  list-style-image: url("../icons/extensions/private-tab.svg") !important;
+}
+
+#privatetabwe_infocatcher-browser-action.webextension-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+}

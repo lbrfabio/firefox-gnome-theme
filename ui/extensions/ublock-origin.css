@@ -1,0 +1,32 @@
+/* uBlock Origin
+ * id: {uBlock0@raymondhill.net}
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/ublock-origin */
+
+
+#ublock0_raymondhill_net-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("../icons/extensions/ublock-origin.svg") !important;
+  opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+}
+
+#ublock0_raymondhill_net-browser-action[label="uBlock Origin (off)"]  > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  list-style-image: url("../icons/extensions/ublock-origin-off.svg") !important;
+  opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+}
+
+#uBO-popup-panel > body {
+  width: 100% !important;
+}
+
+#uBO-popup-panel > body > #panes:not(.dfEnabled) > .tooltipContainer {
+  width: 490px !important;
+}
+
+#widget-overflow[panelopen=true] #PanelUI-webext-ublock0_raymondhill_net-browser-action-view {
+  min-width: 150px !important;
+  max-width: 490px !important;
+  width: 490px !important;
+
+/*  min-width: 150px !important;
+  max-width: 150px !important;
+  width: 150px;*/
+}

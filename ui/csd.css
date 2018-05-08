@@ -1,112 +1,101 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* An ugly hack to add rounded corners to the headerbar
- * TODO remove it when this gets fixed:
- * https://bugzilla.mozilla.org/show_bug.cgi?id=1408360
- * width=960 - horizontally half the screen (1920x1080)
- * height=1053 - vertically maximized (1920x1080) */
-window:not([width="960"]):not([height="1053"]) #nav-bar {
-	border-top-left-radius: 8px;
-}
-window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
-	border-top-right-radius: 8px;
+/*CSD*/
+/* fix graphic bug while moving tabs */
+#TabsToolbar {
+  max-height: 33px !important;
 }
 
-#nav-bar toolbarbutton.chromeclass-toolbar-additional,
-#nav-bar toolbarbutton.toolbarbutton-combined,
-#nav-bar #reload-button,
-#nav-bar #stop-button,
-#PanelUI-menu-button {
-	margin: 6px 3px !important;
+#TabsToolbar[movingtab] {
+  padding-bottom: 0px !important;
 }
 
-#nav-bar {
-	margin-top: -4px !important;
-	padding-right: 7px !important;
-	position: relative;
+#TabsToolbar[movingtab] + #nav-bar {
+  margin-top: -1px !important;
 }
 
-/* Add window controls separator */
-#nav-bar::after {
-	content: "";
-	position: absolute;
-	right: 3px;
-	top: 6px;
-	height: 32px;
-	border-right: 1px solid rgba(0, 0, 0, .1);
+
+/* fix menu button */
+:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
+  /*margin-inline-start: 0px !important;*/
+  border-inline-start: unset !important;
+  border-image: unset !important;
+  border-image-slice: unset !important;
 }
 
-/* Move window buttons next to the header bar */
-#titlebar-buttonbox {
-	background-image: var(--gnome-headerbar-bgimage) !important;
-	border: none !important;
-	border-bottom: var(--gnome-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-headerbar-box-shadow);
-	margin-right: -4px;
-	margin-top: -4px !important;
-	padding-right: 3px;
-}
-#titlebar-buttonbox:-moz-window-inactive {
-	background-image: var(--gnome-inactive-headerbar-bgimage) !important;
-	border-bottom: var(--gnome-inactive-headerbar-border-bottom) !important;
-	box-shadow: var(--gnome-inactive-headerbar-box-shadow);
-}
-#navigator-toolbox {
-	margin-top: -5px;
+#PanelUI-menu-button  {
+  background: linear-gradient(var(--menu-button-separator-color), var(--menu-button-separator-color)) no-repeat !important;
+  background-size: 1px 33%, 1px 33% !important;
+  background-position: 42px !important;
+
+  margin-right: 37px !important;
+
+  padding-inline-start: 0px !important;
+  padding-inline-end: 9px !important;
 }
 
-/* Window buttons */
-#titlebar toolbarbutton {
-	-moz-appearance: none !important;
-	border: var(--gnome-headerbar-button-border) !important;
-	border-color: transparent !important;
-	border-radius: 3px !important;
-	height: 34px;
-	margin: 6px 3px !important;
-	padding: 0 2px !important;
-	position: relative;
-	transition: all .3s ease-out;
-	width: 34px;
-}
-#titlebar toolbarbutton image {
-	filter: invert(85%);
-	margin-left: 6px;
-}
-#titlebar:-moz-window-inactive toolbarbutton image {
-	opacity: .7 !important;
-}
-#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):hover {
-	background-image: var(--gnome-headerbar-button-hover-bgimage);
-	border: var(--gnome-headerbar-button-border) !important;
-}
-#titlebar:not(:-moz-window-inactive) toolbarbutton:not([disabled]):active {
-	background-image: var(--gnome-headerbar-button-active-bgimage);
-	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
-	border: var(--gnome-headerbar-button-border) !important;
-}
-#titlebar:not(:-moz-window-inactive) toolbarbutton[disabled] {
-	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
-	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
-	border: var(--gnome-headerbar-button-border) !important;
+#PanelUI-menu-button.toolbarbutton-1 > .toolbarbutton-badge-stack {
+  margin-right: 0px !important;
+  width: 34px;
+  height: 28px;
 }
 
-/* Remove ugly line before tabs */
-.titlebar-placeholder[type="pre-tabs"] {
-	border-inline-end: 0px solid !important;
+#PanelUI-menu-button.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  padding-left: 3px !important;
+  padding-right: 3px !important;
 }
 
-/* Remove blank space after tabs when window is maximized */
-#main-window:not([sizemode="normal"]) .titlebar-placeholder[type="post-tabs"] {
-	display: none !important;
+
+/*#titlebar {
+  margin-bottom: -33px !important;
+  margin-bottom: -46px !important;
+}*/
+
+/*correct align of titlebar buttons*/
+#titlebar-buttonbox{
+	/*height: 33px !important;*/
+	/*margin-top: 13px !important;*/
+	margin-top: 0px !important;
+	margin-right: 4px !important;
 }
 
-/* Remove window controls blank space after tabs */
-.titlebar-placeholder[type="caption-buttons"] {
-	display: none !important;
+#titlebar-min,
+#titlebar-max,
+#titlebar-close {
+	margin-top: 9px !important;
 }
 
-/* Remove blank space before and after tabs */
-.titlebar-placeholder[type="pre-tabs"],
-.titlebar-placeholder[type="post-tabs"] {
-	display: none !important;
+/*avoid duplicate image*/
+#titlebar-min,
+#titlebar-max {
+	margin-right: 6px !important;
+}
+#titlebar-min > image{
+	opacity: 0 !important;
+}
+
+#titlebar-max > image{
+	opacity: 0 !important;
+}
+
+#titlebar-close > image {
+	opacity: 0 !important;
+}
+
+/* if fullscreen button added to toolbar show only in fullscreen mode
+TODO: show to right of menu button */
+#main-window:not([inFullscreen]) #fullscreen-button {
+  display: none !important;
+}
+
+#main-window[inFullscreen] #fullscreen-button {
+  display: inline !important;
+}
+
+#main-window[inFullscreen] #window-controls {
+  display: none !important;
+}
+
+#main-window[inFullscreen] #nav-bar[context="autohide-context"] #PanelUI-menu-button {
+  margin-right: 0px !important;
 }

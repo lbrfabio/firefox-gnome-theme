@@ -1,0 +1,83 @@
+@import "theme.css";
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --toolbar-bgcolor: #e7e8eb !important;
+  --toolbar-bgimage: none !important;
+  --toolbar-border-color: #d4d5db !important;
+  --tabstoolbar-bgcolor: #dfdfdf;
+
+  --tab-line-color: #d4d5db !important;
+  --tab-loading-fill: #5294e2 !important;
+
+  --tabs-border-color: var(--toolbar-border-color) !important;
+
+  --arc-tab-hover-border-color: var(--tabs-border-color);
+  --arc-tab-selected-border-color: var(--tabs-border-color);
+
+  --arc-tab-hover-bgcolor: #e8e8e8;
+  --arc-tab-selected-bgcolor: #f0f0f0;
+
+  --arc-tab-color: #7f889f;
+  --arc-tab-hover-color: #6a7185;
+  --arc-tab-selected-color: -moz-menubartext;
+
+  --toolbarbutton-hover-background: #fafbfb !important;
+  --arc-toolbarbutton-hover-border:  1px solid var(--arc-toolbarbutton-hover-bordercolor);
+  --arc-toolbarbutton-hover-bordercolor: #d8dadf;
+  --arc-toolbarbutton-hover-boxshadow: none ;
+
+  --toolbarbutton-active-background: #5294e2 !important;
+  --arc-toolbarbutton-active-border:  1px solid var(--arc-toolbarbutton-active-bordercolor);
+  --arc-toolbarbutton-active-bordercolor: transparent;
+  --arc-toolbarbutton-active-boxshadow: none;
+
+  --toolbarbutton-border-radius: 3px !important;
+  --toolbarbutton-icon-fill-opacity: 1.0 !important; /*0.75 if lwt fil is not set*/
+  --toolbarbutton-icon-fill-attention: #5294e2 !important;
+
+  --lwt-toolbarbutton-icon-fill: #70788d !important;
+
+  --arc-toolbarbutton-icon-fill-opacity-hover: 1.0;
+  /*--toolbarbutton-icon-fill: currentColor;*/
+  --arc-toolbarbutton-icon-fill-hover: white;
+
+  --backbutton-background: transparent !important;
+  --backbutton-hover-background: var(--toolbarbutton-hover-background) !important;
+  --backbutton-active-background: var(--toolbarbutton-active-background) !important;
+  --backbutton-border-color: transparent !important;
+
+  --panel-separator-color: hsla(210,4%,10%,.07) !important;
+/*  --arc-arrowpanel-dimmed-lighter: hsla(0,0%,80%,.18);*/
+  --arrowpanel-dimmed: hsla(0,0%,80%,.3) !important;
+  --arrowpanel-dimmed-further: hsla(0,0%,80%,.45) !important;
+  --arrowpanel-dimmed-even-further: hsla(0,0%,80%,.8) !important;
+
+  --urlbar-separator-color: #d8dadf !important;
+  --urlbar-icon-padding: 7px !important;
+
+  --menu-button-separator-color: var(--urlbar-separator-color);
+}
+
+
+:root:-moz-lwtheme-darktext,
+toolbar:not([brighttext]) {
+  --toolbarbutton-hover-background: #fafbfb !important;
+  --arc-toolbarbutton-hover-border:  1px solid var(--arc-toolbarbutton-hover-bordercolor);
+  --arc-toolbarbutton-hover-bordercolor: #d8dadf;
+  --arc-toolbarbutton-hover-boxshadow: none;
+
+  --toolbarbutton-active-background: #5294e2 !important;
+  --arc-toolbarbutton-active-border:  1px solid var(--arc-toolbarbutton-active-bordercolor);
+  --arc-toolbarbutton-active-bordercolor: transparent;
+  --arc-toolbarbutton-active-boxshadow: none;
+
+  --arc-toolbarbutton-icon-fill-opacity-hover: 1.0;
+  /*--toolbarbutton-icon-fill: currentColor;*/
+  --arc-toolbarbutton-icon-fill-hover: white;
+
+  --backbutton-background: transparent !important;
+  --backbutton-hover-background: var(--toolbarbutton-hover-background) !important;
+  --backbutton-active-background: var(--toolbarbutton-active-background) !important;
+}

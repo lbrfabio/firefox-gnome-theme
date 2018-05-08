@@ -1,71 +1,51 @@
 /*
+ * Tips: 
+ * # enable browser chrome and add-on debugging toolbox,  enable remote debugging
+ * then press "Ctrl+Alt+Shift + I" to inspect UI elements
+ *
+ * # click the icon on the right of the debugging toolbox with 4 square to disable auto hide popup
+ */
+
+/*
  * In this file you can enable styles which apply to Firefox' user interface.
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
-/*******************************************************************************
- * GNOME Theme
- * Pick whichever variant you like, it doesn't have to match your GNOME version,
- * but it will probably look better if it does. Remember that your GTK theme
- * variant must match the variant you pick here, eg. if you pick a light
- * variant, you must also run Firefox using the light variant by either
- * disabling global dark theme in GNOME Tweak Tool or running Firefox explicity
- * with the light theme:
- *   $ GTK_THEME=Adwaita:light firefox
- * The opposite applies to the dark variant, you must either enable global dark
- * theme or run Firefox like this:
- *   $ GTK_THEME=Adwaita:dark firefox
- */
-
-/* GNOME 3.18 light theme */
-/*@import "ui/gnome-3.18-light.css"; /**/
-/* GNOME 3.18 dark theme */
-/*@import "ui/gnome-3.18-dark.css"; /**/
-/* GNOME 3.26 light theme */
-/*@import "ui/gnome-3.26-light.css"; /**/
-/* GNOME 3.26 dark theme */
-/*@import "ui/gnome-3.26-dark.css"; /**/
+@import "ui/arc-gnome-3.27.css";
 
 /*******************************************************************************
 /* Client-side decorations (optional)
+ * You can enable Firefox' CSD support in the app menu 
+ * → Customize... → uncheck "Title Bar" at the bottom of the window which is 
+ * the same as  enabling a key in about:config — browser.tabs.drawInTitlebar
  */
 
-/* Enable CSD for Firefox 59 (Fedora only) and 59 beta (all distros) */
-/*@import "ui/csd.css"; /**/
-/* Enable CSD for Firefox 60+ beta (experimental) */
-/*@import "ui/experimental-ff-60-csd.css"; /**/
-
+/* Enable CSD  */
+@import "ui/csd.css";
 /* Window controls: just 1 button */
-/*@import "ui/csd-1-button.css"; /**/
+/*@import "ui/csd-1-button.css";*/
 /* Window controls: 2 buttons */
-/*@import "ui/csd-2-buttons.css"; /**/
+/*@import "ui/csd-2-buttons.css";*/
 /* Window controls: 3 buttons */
-/*@import "ui/csd-3-buttons.css"; /**/
+/*@import "ui/csd-3-buttons.css";*/
 
-/*******************************************************************************
- * Other features (optional)
- */
+/* Compact Findbar */
+@import "ui/findBar.css";
 
-/* Hide the tab bar when only one tab is open
- * Warning: This also hides the private browsing indicator in private windows.
- * If you are using it, you might wanna enable the next feature too. Also you
- * should move the new tab button somewhere else for this to work, because by
- * default it is on the tab bar too. */
-/*@import "ui/hide-single-tab.css"; /**/
+/* Misc*/
+@import "ui/autocomplete.css";
+@import "ui/popup.css";
+@import "ui/tab-wheel-scroll.css";
 
-/* Replace the private browsing indicator with a colored URL bar */
-/*@import "ui/private-urlbar.css"; /**/
+/* Extensions */
+@import "ui/extensions.css";
 
-/* Limit the URL bar's autocompletion popup's width to the URL bar's width */
-/*@import "ui/matching-autocomplete-width.css"; /**/
+/* Window inactive state */
+@import "ui/inactive-state.css";
 
-/* Make all tab icons look kinda like symbolic icons */
-/*@import "ui/symbolic-tab-icons.css"; /**/
+/* Private mode  */
+@import "ui/private-mode.css";
 
-/* Import a custom stylesheet
- * Everything you add in your customChrome.css file (it doesn't exist by
- * default) will be included here and preserved between updates, so you can move
- * your configuration to that file if you don't like setting it up after every
- * update. You can also apply your own custom styles in that file. */
-@import "customChrome.css"; /**/
+
+

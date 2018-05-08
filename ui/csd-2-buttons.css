@@ -1,5 +1,5 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#nav-bar {
-	margin-right: 83px;
+#PanelUI-menu-button  {
+	margin-right: 67px !important;
 }

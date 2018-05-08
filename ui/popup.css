@@ -1,0 +1,76 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Riduzione shadow popup */
+:root {
+  --arrowpanel-padding: 0px !important; /*10px !important*/
+/*  --arrowpanel-background: -moz-field !important;
+  --arrowpanel-color: -moz-fieldText !important;*/
+  --arrowpanel-border-color: rgba(0,0,0,.15)!important;
+}
+
+
+/* ::::: menupopup ::::: */
+menupopup,
+panel {
+  -moz-appearance: none !important;
+}
+
+panel {
+  -moz-appearance: menupopup !important;
+}
+
+menupopup {/*menupopup:not(#BMB_bookmarksPopup)*/
+  background-color: Menu !important;
+}
+
+/* ::::: arrow panel ::::: */
+panel[type="arrow"] {
+  -moz-appearance: none !important;
+}
+
+not(#notification) .panel-arrowcontent {
+  padding: var(--arrowpanel-padding) !important;
+  color: var(--arrowpanel-color) !important;
+  background: var(--arrowpanel-background) !important;
+  border: 1px solid var(--arrowpanel-border-color) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.20) !important;
+  margin: 4px !important;
+}
+
+/* ::::: bookmark popup ::::: */
+#BMB_bookmarksPopup {
+  background: transparent !important;
+}
+
+#BMB_bookmarksPopup menupopup {
+  border: 0 !important;
+}
+
+#BMB_viewBookmarksSidebar,
+#BMB_bookmarksShowAllTop, #BMB_bookmarksShowAllTop + menuseparator,
+#BMB_bookmarksToolbar, #BMB_unsortedBookmarks, #BMB_mobileBookmarks, 
+#BMB_mobileBookmarks + menuseparator {
+  display: none !important;
+}
+
+#BMB_bookmarksPopup .panel-arrowcontent > arrowscrollbox {
+  margin-top: 6px !important;
+}
+
+/* ::::: toolbar bookmarks popup */
+#PlacesToolbar .small-separator {
+  -moz-appearance: none;
+  border-top: 1px solid var(--panel-separator-color);
+  margin: 6px 6px;
+}
+
+/* ::::: edit bookmark popup::::: */
+#editBookmarkPanel .panel-arrowcontent {
+  padding: 10px !important;
+}
+
+/* ::::: notification popup ::::: */
+#notification-popup .popup-notification-body-container {
+  padding: 10px !important;
+}
