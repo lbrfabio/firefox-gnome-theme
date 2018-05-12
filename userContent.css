@@ -20,7 +20,7 @@
   }
 	
 /* center top sites rows and limit to six*/
-  .wide-layout-enabled main {
+  main {
     /*width: 786px !important;*/
     /*width: 834px !important;*/
     width: 882px !important;

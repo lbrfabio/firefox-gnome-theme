@@ -11,6 +11,7 @@
   background: var(--tabstoolbar-bgcolor) !important;
   border-top: 1px solid var(--toolbar-border-color) !important;
   border-bottom: 1px solid var(--toolbar-border-color) !important;
+  margin-top: -1px !important;
 }
 
 toolbar#nav-bar {
