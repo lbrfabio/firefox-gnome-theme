@@ -51,6 +51,10 @@
   .title.pinned {
 	font-size: 10px !important;
   }
+
+  .icon.icon-settings {
+    filter: brightness(15);
+  }
 }
 
 /* in content XUL */
