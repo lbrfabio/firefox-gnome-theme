@@ -53,7 +53,7 @@
   }
 
   .icon.icon-settings {
-    filter: brightness(15);
+    background-image: url("./ui/icons/settings.svg") !important;
   }
 }
 
