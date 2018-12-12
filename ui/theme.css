@@ -121,6 +121,13 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 }
 
 /* Tabs On Bottom */
+#titlebar {
+  -moz-box-ordinal-group: 2 !important;
+  /*-moz-appearance: none !important;*/
+  margin-left: -3px !important;
+  margin-right: -3px !important;
+}
+
 #TabsToolbar {
   -moz-box-ordinal-group: 2 !important;
 }
@@ -225,14 +232,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   color: var(--arc-tab-selected-color) !important;
 }
 
-/* Reduce tabs placeholder margin*/
-.titlebar-placeholder[type="pre-tabs"] {
+/* Reduce tabs spacer margin */
+.titlebar-spacer[type="pre-tabs"] {
   border-inline-end: 0px solid !important;
   opacity: 0 !important;
 }
 
-.titlebar-placeholder[type="pre-tabs"], 
-.titlebar-placeholder[type="post-tabs"] {
+.titlebar-spacer[type="pre-tabs"], 
+.titlebar-spacer[type="post-tabs"] {
+  display: -moz-box !important;
   width: 8px !important;
 }
 

@@ -36,7 +36,8 @@
 /* Misc*/
 @import "ui/autocomplete.css";
 @import "ui/popup.css";
-@import "ui/tab-wheel-scroll.css";
+/*Only if Firefox < 65 */
+/*@import "ui/tab-wheel-scroll.css";*/
 
 /* Extensions */
 @import "ui/extensions.css";

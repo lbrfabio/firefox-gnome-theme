@@ -11,12 +11,12 @@
 }
 
 /* ::::: ui/csd.css ::::: */
-:-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):-moz-window-inactive {
+:-moz-any(.titlebar-min, .titlebar-max, .titlebar-close):-moz-window-inactive {
   filter: grayscale(1);
   opacity: .45 !important;
 }
 
-:-moz-any(#titlebar-min, #titlebar-max, #titlebar-close):hover:-moz-window-inactive {
+:-moz-any(.titlebar-min, .titlebar-max, .ttitlebar-close):hover:-moz-window-inactive {
   filter: grayscale(0) !important;
   opacity: 0.6 !important;
 }

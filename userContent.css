@@ -3,6 +3,13 @@
 
 
 @-moz-document url("about:privatebrowsing") {
+  body {
+    background-color: #404552 !important;
+    color: #D3DAE3 !important;
+  }
+  h1 {
+    color: #D3DAE3 !important;
+  }
   #startTour {
     color: #fff !important;
   }

@@ -45,45 +45,42 @@
   padding-right: 3px !important;
 }
 
-
-/*#titlebar {
-  margin-bottom: -33px !important;
-  margin-bottom: -46px !important;
-}*/
-
 /*correct align of titlebar buttons*/
-#titlebar-buttonbox{
-	/*height: 33px !important;*/
-	/*margin-top: 13px !important;*/
-	margin-top: 0px !important;
-	margin-right: 4px !important;
+.titlebar-buttonbox-container {
+ position: absolute !important;
+ top: 0px !important;
+ right: 7px !important;
 }
 
-#titlebar-min,
-#titlebar-max,
-#titlebar-close {
-	margin-top: 9px !important;
+.titlebar-buttonbox{
+  /*margin-top: 0px !important;
+  margin-right: 4px !important;*/
+}
+
+.titlebar-min,
+.titlebar-max,
+.titlebar-close {
+/*	margin-top: 9px !important; */
 }
 
 /*avoid duplicate image*/
-#titlebar-min,
-#titlebar-max {
-	margin-right: 6px !important;
+.titlebar-min,
+.titlebar-max {
+  margin-right: 6px !important;
 }
-#titlebar-min > image{
-	opacity: 0 !important;
-}
-
-#titlebar-max > image{
-	opacity: 0 !important;
+.titlebar-min > image{
+  opacity: 0 !important;
 }
 
-#titlebar-close > image {
-	opacity: 0 !important;
+.titlebar-max > image{
+  opacity: 0 !important;
 }
 
-/* if fullscreen button added to toolbar show only in fullscreen mode
-TODO: show to right of menu button */
+.titlebar-close > image {
+  opacity: 0 !important;
+}
+
+/* if fullscreen button added to toolbar show only in fullscreen mode */
 #main-window:not([inFullscreen]) #fullscreen-button {
   display: none !important;
 }
