@@ -36,7 +36,7 @@
 /* Misc*/
 @import "ui/autocomplete.css";
 @import "ui/popup.css";
-/*Only if Firefox < 65 */
+/*Only if Firefox < 65. Set true tooltik.tabbox.switchByScrolling*/
 /*@import "ui/tab-wheel-scroll.css";*/
 
 /* Extensions */
