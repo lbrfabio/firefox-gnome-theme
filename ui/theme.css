@@ -241,7 +241,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .titlebar-spacer[type="pre-tabs"], 
 .titlebar-spacer[type="post-tabs"] {
   display: -moz-box !important;
-  width: 24px !important;
+  width: 16px !important;
 }
 
 /* Pinned tabs*/
