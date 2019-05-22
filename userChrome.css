@@ -8,6 +8,10 @@
 
 /*
  * In this file you can enable styles which apply to Firefox' user interface.
+ *
+ * To enable or disable userChrome set to true or false this key in about:config:
+ * toolkit.legacyUserProfileCustomizations.stylesheets
+ *
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.
  */

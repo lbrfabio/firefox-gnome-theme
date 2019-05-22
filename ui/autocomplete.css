@@ -1,38 +1,30 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Rimozione margini popup autocomplete*/
-#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-  padding: 0 0 !important;
-  margin: -1px !important;
+#urlbarView-results {
+    padding: 0 0 !important;
+    margin: -1px -1px !important;
 }
 
-#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+.urlbarView-body-outer {
+  margin-bottom: -2px !important;
+}
+
+.urlbarView-row {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
   border-radius: 0 !important;
 }
 
-/** Color for URL bar, from Evandro (efg) on #gnome-design **/
-.ac-url-text,
-.ac-action-text {
-  font-size: 95% !important;
+/** Color for URL bar **/
+.urlbarView-url,
+.urlbarView-action {
   color: gray !important;
 }
 
-.ac-separator[selected="true"],
-.ac-comment[selected="true"],
-.ac-url-text[selected="true"],
-.ac-action-text[selected="true"] {
+.urlbarView-row[selected] .urlbarView-title-separator, 
+.urlbarView-row[selected] .urlbarView-url,
+.urlbarView-row[selected] .urlbarView-action {
   color: #f3f3f3 !important;
-}
-
-/** Firefox 68+ url colors and resultspadding */
-#urlbarView-results {
-    padding: 0 0 !important;
-    margin: -1px !important;
-}
-
-.urlbarView-url {
-  color: gray !important;
 }
 
