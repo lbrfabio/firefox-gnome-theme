@@ -22,6 +22,10 @@ toolbarseparator {
   opacity: 0.1 !important;
 }
 
+#PersonalToolbar {
+  margin-top: 1px !important;
+  margin-bottom: -1px !important;
+}
 
 /*Toolbar button default behaviour */
 #PersonalToolbar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover,
