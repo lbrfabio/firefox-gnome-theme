@@ -12,7 +12,7 @@
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
-@import "ui/arc-gnome-3.27.css";
+@import "ui/arc-gnome-3.30.css";
 
 /*******************************************************************************
 /* Client-side decorations (optional)
@@ -36,7 +36,7 @@
 /* Misc*/
 @import "ui/autocomplete.css";
 @import "ui/popup.css";
-/*Only if Firefox < 65. Set true tooltik.tabbox.switchByScrolling*/
+/*Only if Firefox < 65. Set true toolkit.tabbox.switchByScrolling*/
 /*@import "ui/tab-wheel-scroll.css";*/
 
 /* Extensions */

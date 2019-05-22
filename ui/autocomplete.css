@@ -25,3 +25,14 @@
 .ac-action-text[selected="true"] {
   color: #f3f3f3 !important;
 }
+
+/** Firefox 68+ url colors and resultspadding */
+#urlbarView-results {
+    padding: 0 0 !important;
+    margin: -1px !important;
+}
+
+.urlbarView-url {
+  color: gray !important;
+}
+
