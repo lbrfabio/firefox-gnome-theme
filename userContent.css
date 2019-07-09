@@ -19,11 +19,17 @@
   body {
     overflow-y: hidden !important;
     background-color: #f2f2f2 !important;
+
+    --newtab-inner-box-shadow-color: rgba(255, 255, 255, 0.025) !important;
   }
 
   .section-top-bar .section-title .click-target,
   .section-top-bar .context-menu-button {
     visibility: hidden !important;
+  }
+
+  .sections-list {
+    transform: scale(1.2) !important;
   }
 	
 /* center top sites rows and limit to six*/

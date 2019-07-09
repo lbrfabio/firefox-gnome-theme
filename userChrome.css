@@ -12,6 +12,9 @@
  * To enable or disable userChrome set to true or false this key in about:config:
  * toolkit.legacyUserProfileCustomizations.stylesheets
  *
+ * To fix dark scrollbar and other input elements enable set to true this key in about:config
+ * widget.content.allow-gtk-dark-theme
+ *
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.
  */
