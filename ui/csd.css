@@ -14,10 +14,10 @@
   margin-top: -1px !important;
 }
 
-
 /* fix menu button */
 :root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
   /*margin-inline-start: 0px !important;*/
+  padding-inline-start: 0px !important;
   border-inline-start: unset !important;
   border-image: unset !important;
   border-image-slice: unset !important;
