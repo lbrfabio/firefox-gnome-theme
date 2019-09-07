@@ -7,7 +7,7 @@
 This is a bunch of CSS code to make Firefox 59+ look closer to [Arc-solid](https://github.com/horst3180/arc-theme) theme.
 It styles the UI and internal Firefox' pages like `about:` and`view-source:`.
 
-The `master` branch is currently tracking **Firefox 61**.
+The `master` branch is currently tracking **Firefox 70**.
 
 ## Installation
 

@@ -58,9 +58,9 @@ toolbar .toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:a
 }
 
 /* increase width of toolbarbutton to set horizontal padding*/
-toolbar .toolbarbutton-1:not(.tabs-newtab-button) > .toolbarbutton-icon {
+toolbar .toolbarbutton-1:not(#tabs-newtab-button):not(#new-tab-button) > .toolbarbutton-icon {
     width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;
-    /*height: calc(2 * var(--toolbarbutton-inner-padding) + 16px);*/
+    /*height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;*/
 }
 
 toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
@@ -259,25 +259,30 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 0 8px !important;
 }
 
-/* new tab button, reduce size*/
-#new-tab-button > .toolbarbutton-icon,
-.tabs-newtab-button.toolbarbutton-1 > .toolbarbutton-icon {
+/* fix new tab button size and colors*/
+#tabs-newtab-button > .toolbarbutton-icon {
   padding-top: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
+}
+
+#tabs-newtab-button,
+#new-tab-button {
+  margin: 1px 0px 1px 0px !important;
+}
+
+#tabs-newtab-button > .toolbarbutton-icon,
+#new-tab-button > .toolbarbutton-icon {
   fill: #7f889f !important;
 }
 
+#tabs-newtab-button:-moz-any([open],:hover:active) > .toolbarbutton-icon,
 #new-tab-button:-moz-any([open],:hover:active) > .toolbarbutton-icon {
   fill: #ffffff !important;
 }
 
-#TabsToolbar .tabs-newtab-button.toolbarbutton-1 {
-  margin: 1px 0px 1px !important;
-}
-
-/* new tab button in overflow, fix problems with setup of toolbar icons*/
-#TabsToolbar :not(.tabs-newtab-button).toolbarbutton-1,
+/* fix overflows icons size and colors */
+#TabsToolbar :not(#new-tab-button).toolbarbutton-1,
 .tabbrowser-arrowscrollbox > .scrollbutton-up, .tabbrowser-arrowscrollbox > .scrollbutton-down {
-  margin: 3px 0px 1px !important;
+  margin: 1px 0px 1px 0px !important;
 }
 
 /* remove overflow shadows, style colors*/
@@ -305,9 +310,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   overflow: hidden !important;
 }*/
 
-#new-tab-button > .toolbarbutton-icon {
-  padding: 7px 10px !important;
-}
 
 /* Context Navigation Menù*/
 #context-navigation {

@@ -1,13 +1,16 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* Rimozione margini popup autocomplete*/
-#urlbarView-results {
-    padding: 0 0 !important;
-    margin: -1px -1px !important;
+.urlbarView {
+  z-index: 1000 !important;
 }
 
-.urlbarView-body-outer {
-  margin-bottom: -2px !important;
+/* Rimozione margini popup autocomplete*/
+.urlbarView:not(.megabar) .urlbarView-results {
+  padding-inline: 0 !important;
+}
+
+.urlbarView-results {
+  padding-block: 0 !important;
 }
 
 .urlbarView-row {
