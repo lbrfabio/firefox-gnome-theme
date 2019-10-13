@@ -42,10 +42,10 @@
 
 #main-window:-moz-window-inactive .tab-throbber,
 #main-window:-moz-window-inactive .tab-icon-image {
-  filter: grayscale(1) !important;
   opacity: 0.5 !important;
 }
 
+#main-window:-moz-window-inactive .bookmark-item > .toolbarbutton-icon,
 #main-window:-moz-window-inactive .folder-icon {
   opacity: 0.5 !important;
   fill-opacity: 0.5!important;
