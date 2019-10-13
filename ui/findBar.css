@@ -22,7 +22,7 @@ findbar {
   -moz-box-ordinal-group: 0 !important;
   position: fixed !important;
   left: 42px !important;
-  display:block !important;
+  display: block;
 }
 
 findbar[hidden] {
