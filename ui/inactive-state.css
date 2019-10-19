@@ -40,8 +40,8 @@
   fill-opacity: 0.45 !important;
 }
 
-#main-window:-moz-window-inactive .tab-throbber,
-#main-window:-moz-window-inactive .tab-icon-image {
+#TabsToolbar:-moz-window-inactive .tab-throbber,
+#TabsToolbar:-moz-window-inactive .tab-icon-image {
   opacity: 0.5 !important;
 }
 
