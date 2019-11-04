@@ -45,10 +45,12 @@
 /*#TabsToolbar:-moz-window-inactive .tab-throbber,*/
 #TabsToolbar:-moz-window-inactive .tab-icon-image {
   opacity: 0.5 !important;
+  filter: grayscale(100%);
 }
 
 #PlacesToolbarItems:-moz-window-inactive .bookmark-item > .toolbarbutton-icon,
 #PlacesToolbarItems:-moz-window-inactive .folder-icon {
   opacity: 0.5 !important;
   fill-opacity: 0.5!important;
+  filter: grayscale(100%);
 }
