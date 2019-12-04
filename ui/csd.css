@@ -41,8 +41,8 @@
 }
 
 #PanelUI-menu-button.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
-  padding-left: 3px !important;
-  padding-right: 3px !important;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 /*correct align of titlebar buttons*/
