@@ -23,6 +23,7 @@ findbar {
   position: fixed !important;
   left: 42px !important;
   display: block;
+  z-index: 2147483647;
 }
 
 findbar[hidden] {
