@@ -30,8 +30,8 @@
 	
 /* center top sites rows and limit to six*/
   main {
-	margin: auto;
-	padding: 0;
+	margin: auto !important;
+	padding: 0 !important;
     width: 890px !important;
     transform: scale(1.3) !important;
   }
