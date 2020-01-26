@@ -72,10 +72,14 @@
 /* center top sites rows and limit to six per row */
   main {
 	/*padding: 0 !important;*/
-	padding-bottom: 34px;
+	padding-bottom: 36px;
 	margin: auto !important;	
     width: 890px !important;
-    transform: scale(1.3) !important;*/
+    transform: scale(1.2) !important;
+  }
+
+  .collapsible-section {
+      padding: 25px 25px;
   }
 
    /* increase padding between sites*/
