@@ -25,7 +25,6 @@
 @-moz-document url("about:home"), url("about:newtab") {
   body {
     background-color: #f2f2f2 !important;
-
     --newtab-inner-box-shadow-color: rgba(255, 255, 255, 0.025) !important;
   }
 
@@ -61,6 +60,21 @@
     height: 24px !important;
     width: 24px !important;
   }
+
+   /* reduce search bar padding and increase top padding for collapsible*/
+	.search-wrapper {
+      padding: 34px 0 !important;
+   }
+
+  .collapsible-section {
+    padding: 25px 25px 10px !important;
+  }
+
+  /* change search bar focus*/
+  .search-wrapper input {
+    --newtab-textbox-focus-boxshadow: 0 1px 4px 0 rgba(82, 148, 226, 0.2), 0 0 0 1px rgba(82, 148, 226, 0.15) !important;
+    --newtab-textbox-focus-color: #5294E2 !important;
+   }
 }
 
 /* change url to about:newtab to enable rules (useful only if web search and highlights are not used)*/
@@ -127,8 +141,38 @@
   --in-content-primary-button-background-active: #006b9d !important;
   --in-content-table-border-dark-color: #d1d1d1 !important;
   --in-content-table-header-background: #0095dd !important;
+
+  /* default blue for input and button focus*/
+  --blue-50: #5294E2 !important;
+  --blue-50-a30: rgba(82, 148, 226, 0.3) !important;
 }
 
+/* collapsible arrow head button */
+.arrowhead {
+  max-width: 38px !important;
+}
+
+/* input focus */
+html|input[type="email"]:focus,
+html|input[type="tel"]:focus,
+html|input[type="text"]:focus,
+html|input[type="password"]:focus,
+html|input[type="url"]:focus,
+html|input[type="number"]:focus,
+html|textarea:focus,
+xul|search-textbox[focused] {
+  box-shadow: 0 1px 4px 0 var(--in-content-border-active-shadow), 0 0 0 1px var(--in-content-border-active-shadow) !important;
+}
+
+/* button focus*/
+button:-moz-focusring,
+html|select:-moz-focusring,
+html|input[type="checkbox"]:-moz-focusring,
+html|input[type="color"]:-moz-focusring,
+xul|menulist:-moz-focusring {
+  outline: 1px solid var(--in-content-border-active) !important;
+  box-shadow: 0 0 0 1px var(--in-content-border-active-shadow) !important;
+}
 
 /* xul buttons and menulists */
 xul|button,
@@ -204,8 +248,8 @@ xul|checkbox {
 xul|*.checkbox-check,
 xul|input[type="checkbox"] {
   -moz-appearance: none !important;
-  width: 13px !important;
-  height: 13px !important;
+  width: 16px !important;
+  height: 16px !important;
   border: 1px solid var(--in-content-box-border-color) !important;
   border-radius: 2px !important;
   margin: 0 !important;
