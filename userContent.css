@@ -29,6 +29,12 @@
     --newtab-inner-box-shadow-color: rgba(255, 255, 255, 0.025) !important;
   }
 
+  /* remove padding around main content*/
+  .ds-outer-wrapper-breakpoint-override,
+  .ds-outer-wrapper-breakpoint-override main {
+    padding: 0 !important;
+  }
+
      /*diffuse border of tiles*/
   .top-sites-list .top-site-outer:-moz-any(.active, :focus, :hover) .tile {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px 2px #D7D7DB !important;
@@ -57,23 +63,17 @@
   }
 }
 
-@-moz-document url("about:newtab") {
-  /* always hide scrollbar */
-  body {
-    overflow-y: hidden !important;
-  }
-
+/* change url to about:newtab to enable rules (useful only if web search and highlights are not used)*/
+@-moz-document url("about:newtab_disabled") {
   /* hide info bars */
   .section-top-bar .section-title .click-target,
   .section-top-bar .context-menu-button {
     visibility: hidden !important;
   }
-	
-/* center top sites rows and limit to six per row */
+
+  /* center top sites rows and limit to six per row */
   main {
-	/*padding: 0 !important;*/
-	padding-bottom: 36px;
-	margin: auto !important;	
+    margin: auto !important;
     width: 890px !important;
     transform: scale(1.2) !important;
   }
@@ -86,6 +86,7 @@
   .top-site-outer {
     padding: 0 24px !important;
   }
+
 }
 
 /* in content XUL */
