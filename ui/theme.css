@@ -86,6 +86,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
   padding: var(--toolbarbutton-inner-padding) !important;
 }
 
+#placesToolbox #back-button > .toolbarbutton-icon {
+  height: 16px !important;
+}
+
 /* Toolbar buttons */
 :root:not([uidensity="compact"]) #back-button  > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon,
