@@ -57,6 +57,11 @@ toolbar .toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:a
   fill-opacity: var(--arc-toolbarbutton-icon-fill-opacity-hover) !important;
 }
 
+.findbar-button:not(:-moz-any([checked="true"],[disabled="true"])):hover > .toolbarbutton-text,
+.findbar-button:not([disabled=true]):-moz-any([checked="true"],:hover:active) > .toolbarbutton-text {
+  outline: none !important;
+}
+
 /* increase width of toolbarbutton to set horizontal padding*/
 toolbar .toolbarbutton-1:not(#tabs-newtab-button):not(#new-tab-button) > .toolbarbutton-icon {
     width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;

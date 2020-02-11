@@ -17,6 +17,9 @@
  *
  * To enable a specific feature, uncomment its @import line by removing "/*" at
  * the beginning of the line. To disable it, put the "/*" back.
+ *
+ * To disable auto open popup on focus urlbar set to false this key in about:config:
+ * browser.urlbar.openViewOnFocus
  */
 
 @import "ui/arc-gnome-3.30.css";

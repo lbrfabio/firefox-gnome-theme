@@ -4,6 +4,11 @@
   z-index: 1000 !important;
 }
 
+/* constraint urlbar inside nav-bar */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  margin-bottom: -2px;
+}
+
 /* Rimozione margini popup autocomplete*/
 .urlbarView:not(.megabar) .urlbarView-results {
   padding-inline: 0 !important;
@@ -13,10 +18,12 @@
   padding-block: 0 !important;
 }
 
-.urlbarView-row {
+.urlbarView-row:first-child {
   padding-top: 8px !important;
+}
+
+.urlbarView-row:last-child {
   padding-bottom: 8px !important;
-  border-radius: 0 !important;
 }
 
 /** Color for URL bar **/

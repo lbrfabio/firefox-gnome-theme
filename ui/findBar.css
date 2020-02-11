@@ -15,14 +15,14 @@ findbar {
   transition-property: margin-bottom, opacity, visibility !important;
   transition-duration: 150ms, 150ms, 0s !important;
   transition-timing-function: ease-in-out, ease-in-out, linear !important;
-  box-shadow: 0 1px 2px rgba(0,0,0,.40) !important;
+  box-shadow: none !important;
   border-radius: 0 0 2px 2px !important;
 
   /* Move findbar to top left corner */
   -moz-box-ordinal-group: 0 !important;
   position: fixed !important;
-  left: 42px !important;
-  display: block;
+  left: 14px !important;
+  display: flex !important;
   z-index: 2147483647;
 }
 
@@ -51,12 +51,12 @@ findbar toolbarbutton {
   color: ButtonText !important;
   padding: 5px !important;
   transition-property: border, box-shadow, background !important;
-  transition-duration: 200ms !important;
+  transition-duration: 50ms !important;
 }
 
 findbar toolbarbutton:not([disabled="true"]):hover {
   background-image: linear-gradient(to bottom, rgba(255,255,255,.8), rgba(255,255,255,.8)) !important;
-  border-color: rgba(166,166,166,.4) !important;
+  border-color: #d4d5db !important;
   box-shadow: none !important;
 }
 
@@ -89,6 +89,8 @@ findbar toolbarbutton[disabled="true"]:active:hover {
   -moz-appearance: none !important;
   border: none !important;
   margin-left: 3px !important;
+  height: 22px !important;
+  margin: auto !important;
 }
 
 .findbar-closebutton:active:hover {
@@ -107,11 +109,6 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 
 .findbar-closebutton.close-icon:active:hover > .toolbarbutton-icon {
   filter: invert(100%) !important;
-}
-
-.findbar-closebutton.close-icon > .toolbarbutton-icon {
-  margin-top: -3px !important;
-  padding-top: 3px !important;
 }
 
 /* Search field */
@@ -243,10 +240,14 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 
 .findbar-highlight > .toolbarbutton-text,
 .findbar-case-sensitive > .toolbarbutton-text,
-.findbar-entire-word  > .toolbarbutton-text{
+.findbar-entire-word  > .toolbarbutton-text {
   font-size: 10px !important;
   padding: 1px !important;
   margin: 0px !important;
+}
+
+.findbar-match-diacritics {
+  display: none !important;
 }
 
 /* FIXME: image not drawn anymore */
@@ -294,7 +295,6 @@ findbar toolbarbutton[disabled="true"]:active:hover {
   list-style-image: url("./icons/findBar/loading.png") !important;
 }
 
-
 /* show full quickfindbar.css*/
 label.findbar-find-fast{
   visibility: collapse !important;
@@ -307,4 +307,9 @@ label.found-matches,
 .findbar-button {
   display: block !important;
   visibility: visible !important;
+  outline-color: transparent !important;
+}
+
+.findbar-match-diacritics {
+  display: none !important;
 }

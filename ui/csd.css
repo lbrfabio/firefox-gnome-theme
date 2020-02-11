@@ -61,7 +61,8 @@
 .titlebar-min,
 .titlebar-max,
 .titlebar-close {
-/*	margin-top: 9px !important; */
+ /* same as nav-bar*/
+  height: 42px;
 }
 
 /*avoid duplicate image*/
