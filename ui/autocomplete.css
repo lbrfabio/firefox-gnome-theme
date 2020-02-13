@@ -1,9 +1,5 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-.urlbarView {
-  z-index: 1000 !important;
-}
-
 /* constraint urlbar inside nav-bar */
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
   margin-bottom: -2px;
