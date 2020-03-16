@@ -44,7 +44,7 @@
 @import "ui/findBar.css";
 
 /* Misc*/
-@import "ui/autocomplete.css";
+@import "ui/urlbar.css";
 @import "ui/popup.css";
 /*Only if Firefox < 65. Set true toolkit.tabbox.switchByScrolling*/
 /*@import "ui/tab-wheel-scroll.css";*/
@@ -58,5 +58,5 @@
 /* Private mode  */
 @import "ui/private-mode.css";
 
-
-
+/* Enable UrlBar jump list button (fx 75+) */
+@import "ui/urlbar-history-button.css"
