@@ -1,0 +1,6 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#urlbar-input-container > .urlbar-history-dropmarker {
+  display: block !important;
+  opacity: 100% !important;
+}
