@@ -22,6 +22,7 @@ findbar {
   -moz-box-ordinal-group: 0 !important;
   position: fixed !important;
   left: 14px !important;
+  top: 75px;
   display: flex !important;
   z-index: 2147483647;
 }
@@ -40,9 +41,12 @@ findbar[noanim] {
   transition-delay: 0s !important;
 }
 
+.findbar-container {
+  padding-block: 4px !important;
+  padding-inline-start: 0 !important;
+}
+
 /* Buttons */
-
-
 findbar toolbarbutton {
   -moz-appearance: none !important;
   background: transparent !important;
