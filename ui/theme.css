@@ -391,18 +391,16 @@ treechildren::-moz-tree-image(title, query, hostContainer) {
 
 /* close button, used for many things (tabs, sidebar, findbar)*/
 .close-icon {
-  fill: currentColor !important;
-  fill-opacity: 0 !important;
+  color: currentColor !important;
+  background-color: transparent !important;
 }
 
 .close-icon:hover {
-  fill: #ff4d4d !important;
-  fill-opacity: 0 !important;
+  color: #ff4d4d !important;
 }
 
 .close-icon:active {
-  fill: #5294e2 !important;
-  fill-opacity: 0 !important;
+  color: #5294e2 !important;
 }
 
 
