@@ -73,12 +73,12 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 }
 
 /* Unset back-button round style. Colors are set in arc-gnome css*/
-/*:root:not([uidensity="compact"]) #back-button {
+:root:not([uidensity="compact"]) #back-button {
   padding: 0 var(--toolbarbutton-outer-padding) !important;
   margin-left: 5px !important;
-}*/
+}
 
-/*:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
   border: 0 !important;
   border-radius: var(--toolbarbutton-border-radius) !important;
   width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;
@@ -88,10 +88,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 
 #placesToolbox #back-button > .toolbarbutton-icon {
   height: 16px !important;
-}*/
+}
 
 /* Toolbar buttons */
-/*:root:not([uidensity="compact"]) #back-button  > .toolbarbutton-icon,*/
+:root:not([uidensity="compact"]) #back-button  > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon,
 #home-button  > .toolbarbutton-icon {
   width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;
