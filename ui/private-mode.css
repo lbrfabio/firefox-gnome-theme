@@ -51,24 +51,48 @@
   list-style-image: url("./icons/toolbar/back-private.svg") !important;
 }
 
-#main-window[privatebrowsingmode=temporary] #forward-button > .toolbarbutton-icon {
-  list-style-image: url("./icons/toolbar/forward-private.svg") !important;
-}
-
-#main-window[privatebrowsingmode=temporary] #home-button  > .toolbarbutton-icon {
-  list-style-image: url("./icons/toolbar/user-home-private.svg") !important;
-}
-
 #main-window[privatebrowsingmode=temporary] #back-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/back-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #forward-button > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/forward-private.svg") !important;
 }
 
 #main-window[privatebrowsingmode=temporary] #forward-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/forward-active.svg") !important;
 }
 
+#main-window[privatebrowsingmode=temporary] #home-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/user-home-private.svg") !important;
+}
+
 #main-window[privatebrowsingmode=temporary] #home-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/user-home-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #library-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/library-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #library-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/library-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #nav-bar-overflow-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/chevron-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #nav-bar-overflow-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/chevron-active.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #bookmarks-menu-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/bookmark-star-on-tray-private.svg") !important;
+}
+
+#main-window[privatebrowsingmode=temporary] #bookmarks-menu-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/bookmark-star-on-tray-active.svg") !important;
 }
 
 /* Toolbar menu button */

@@ -58,6 +58,9 @@
   --urlbar-icon-padding: 7px !important;
 
   --menu-button-separator-color: var(--urlbar-separator-color);
+  
+  --arrowpanel-border-radius: 3px !important;
+  --arrowpanel-border-color: #d3d3d3 !important;
 }
 
 

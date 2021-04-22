@@ -73,12 +73,12 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 }
 
 /* Unset back-button round style. Colors are set in arc-gnome css*/
-:root:not([uidensity="compact"]) #back-button {
+/*:root:not([uidensity="compact"]) #back-button {
   padding: 0 var(--toolbarbutton-outer-padding) !important;
   margin-left: 5px !important;
-}
+}*/
 
-:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+/*:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
   border: 0 !important;
   border-radius: var(--toolbarbutton-border-radius) !important;
   width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;
@@ -88,10 +88,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 
 #placesToolbox #back-button > .toolbarbutton-icon {
   height: 16px !important;
-}
+}*/
 
 /* Toolbar buttons */
-:root:not([uidensity="compact"]) #back-button  > .toolbarbutton-icon,
+/*:root:not([uidensity="compact"]) #back-button  > .toolbarbutton-icon,*/
 #forward-button > .toolbarbutton-icon,
 #home-button  > .toolbarbutton-icon {
   width: calc(2 * var(--toolbarbutton-inner-padding) + 22px) !important;
@@ -101,25 +101,53 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
   list-style-image: url("./icons/toolbar/back.svg") !important;
 }
 
-#forward-button > .toolbarbutton-icon {
-  list-style-image: url("./icons/toolbar/forward.svg") !important;
-}
-
-#home-button  > .toolbarbutton-icon {
-  list-style-image: url("./icons/toolbar/user-home.svg") !important;
-  fill: red !important;
-}
-
 #back-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/back-active.svg") !important;
+}
+
+#forward-button > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/forward.svg") !important;
 }
 
 #forward-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/forward-active.svg") !important;
 }
 
+/* Toolbar Buttons (right section) */ 
+#home-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/user-home.svg") !important;
+}
+
 #home-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
   list-style-image: url("./icons/toolbar/user-home-active.svg") !important;
+}
+
+#library-button  > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/library.svg") !important;
+}
+
+#library-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/library-active.svg") !important;
+}
+
+#library-button[animate] > .toolbarbutton-icon {
+  display: none !important;
+}
+
+#nav-bar-overflow-button {
+    list-style-image: url("./icons/toolbar/chevron.svg") !important;
+}
+
+#nav-bar-overflow-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  list-style-image: url("./icons/toolbar/chevron-active.svg") !important;
+}
+
+#bookmarks-menu-button {
+    list-style-image: url("./icons/toolbar/bookmark-star-on-tray.svg") !important;
+}
+
+#bookmarks-menu-button:not([disabled=true]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+    list-style-image: url("./icons/toolbar/bookmark-star-on-tray-active.svg") !important;
 }
 
 /* Toolbar menu button */
@@ -171,6 +199,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   --tab-min-height: 29px !important;
 }
 
+.tab-content {
+  max-height: var(--tab-min-height) !important;
+}
+
 #tabbrowser-tabs {
   padding-top: 2px !important;
 }
@@ -193,6 +225,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
    margin-top: 0 !important;
    margin-bottom: 0 !important;
    opacity: 1 !important;
+}
+
+/* Remove extra tab padding */
+.tabbrowser-tab {
+  padding-inline: 0px !important;
 }
 
 /* fix tabs borders*/
