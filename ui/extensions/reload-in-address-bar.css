@@ -3,23 +3,6 @@
  * URL: https://addons.mozilla.org/en-US/firefox/addon/reload-in-address-bar */
 
 /* move button to the extreme right*/
-#pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_.urlbar-icon.urlbar-page-action {
+#pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_{
    -moz-box-ordinal-group: 99 !important;
-}
-
-/* use this if dark theme enabled in the addon's setting. This will darken the urlbar popup icon*/
-#pageActionPanelMainView #pageAction-panel-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_ {
-  --pageAction-image-16px: url("moz-extension://3981e2f2-d142-4581-a244-d35f0a1b438f/icons/refresh-16-light.svg") !important;
-  --pageAction-image-32px: url("moz-extension://3981e2f2-d142-4581-a244-d35f0a1b438f/icons/refresh-32-light.svg") !important;
-}
-
-/* use this if default or light theme enabled in the addon's setting. This will lighten the urlbar icon */
-/*#page-action-buttons #pageAction-panel-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_ {
-  --pageAction-image-16px: url("moz-extension://3981e2f2-d142-4581-a244-d35f0a1b438f/icons/refresh-16-dark.svg") !important;
-  --pageAction-image-32px: url("moz-extension://3981e2f2-d142-4581-a244-d35f0a1b438f/icons/refresh-32-dark.svg") !important;
-}*/
-
-
-#page-action-buttons #pageAction-panel-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_ {
-  opacity: 0.2 !important;
 }

@@ -22,41 +22,23 @@
  * browser.urlbar.openViewOnFocus
  */
 
-@import "ui/arc-gnome-3.30.css";
-
-/*******************************************************************************
 /* Client-side decorations (optional)
  * You can enable Firefox' CSD support in the app menu 
  * → Customize... → uncheck "Title Bar" at the bottom of the window which is 
  * the same as  enabling a key in about:config — browser.tabs.drawInTitlebar
  */
+ 
+ 
+ /*Themes ^/
+ /*
+ * - Arc Theme: https://addons.mozilla.org/en-US/firefox/addon/arc-theme-we/
+ * - Arc Dark Theme: https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we
+ */
 
-/* Enable CSD  */
-@import "ui/csd.css";
-/* Window controls: just 1 button */
-/*@import "ui/csd-1-button.css";*/
-/* Window controls: 2 buttons */
-/*@import "ui/csd-2-buttons.css";*/
-/* Window controls: 3 buttons */
-/*@import "ui/csd-3-buttons.css";*/
+/********************************************************************************/
 
-/* Compact Findbar */
-@import "ui/findBar.css";
+@import "ui/theme.css";
 
-/* Misc*/
-@import "ui/urlbar.css";
 @import "ui/popup.css";
-/*Only if Firefox < 65. Set true toolkit.tabbox.switchByScrolling*/
-/*@import "ui/tab-wheel-scroll.css";*/
 
-/* Extensions */
 @import "ui/extensions.css";
-
-/* Window inactive state */
-@import "ui/inactive-state.css";
-
-/* Private mode  */
-@import "ui/private-mode.css";
-
-/* Enable UrlBar jump list button (fx 75+) */
-@import "ui/urlbar-history-button.css"

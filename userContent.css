@@ -1,17 +1,22 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+/*
 * {
 	scrollbar-width: thin;
 }
+*/
 
+/*
 :root {
 	scrollbar-color: rgba(155, 155, 155, .5) transparent;
 }
+*/
+
 
 @-moz-document url("about:privatebrowsing") {
-  body {
-    background-color: #404552 !important;
+  /*body {
+    background-color: #383c4a !important;
     color: #D3DAE3 !important;
   }
   h1 {
@@ -19,63 +24,19 @@
   }
   #startTour {
     color: #fff !important;
-  }
+  }*/
 }
 
 @-moz-document url("about:home"), url("about:newtab") {
-  body {
-    background-color: #f2f2f2 !important;
-    --newtab-inner-box-shadow-color: rgba(255, 255, 255, 0.025) !important;
-  }
-
-  /* remove padding around main content*/
-  .ds-outer-wrapper-breakpoint-override,
-  .ds-outer-wrapper-breakpoint-override main {
-    padding: 0 !important;
-  }
-
-     /*diffuse border of tiles*/
-  .top-sites-list .top-site-outer:-moz-any(.active, :focus, :hover) .tile {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px 2px #D7D7DB !important;
-  }
-
-   /*ligthen tile text color*/
-  .top-sites-list .top-site-outer .top-site-inner > a {
-    color: #8d9091 !important;
-  }
+  /*body {
+    color: #D3DAE3 !important;
+  }*/
 
    /* reduce font-size*/
   .title.pinned {
 	font-size: 10px !important;
   }
 
-   /* change setting icon*/
-  .icon.icon-settings {
-    background-image: url("./ui/icons/settings.svg") !important;
-  }
-
-   /*reduce bottom right favicon*/
-  .top-sites-list .top-site-outer .default-icon {
-    background-size: 16px !important;
-    height: 24px !important;
-    width: 24px !important;
-  }
-
-   /* reduce search bar padding and increase top padding for collapsible*/
-   .search-wrapper {
-      padding: 34px 0 !important;
-   }
-
-  .collapsible-section {
-    padding: 25px 25px 10px !important;
-  }
-
-  /* change search bar focus*/
-  .search-wrapper input {
-    --newtab-textbox-focus-boxshadow: 0 1px 4px 0 rgba(82, 148, 226, 0.2), 0 0 0 1px rgba(82, 148, 226, 0.15) !important;
-    --newtab-textbox-focus-color: #5294E2 !important;
-   }
-   
    /* Disable pinned icon padding */
   .top-site-outer .tile .icon-wrapper {
     width: 80px !important;
@@ -87,229 +48,9 @@
   .icon.icon-pin-small {
     opacity: 0.5 !important;
   }
-}
-
-/* change url to about:newtab to enable rules (useful only if web search and highlights are not used)*/
-@-moz-document url("about:newtab_disabled") {
-  /* hide info bars */
-  .section-top-bar .section-title .click-target,
-  .section-top-bar .context-menu-button {
-    visibility: hidden !important;
+  
+  /* Hide personalize button */
+  .personalize-button {
+    display: none !important;
   }
-
-  /* center top sites rows and limit to six per row */
-  main {
-    margin: auto !important;
-    width: 890px !important;
-    transform: scale(1.2) !important;
-  }
-
-  .collapsible-section {
-      padding: 25px 25px;
-  }
-
-   /* increase padding between sites*/
-  .top-site-outer {
-    padding: 0 24px !important;
-  }
-
-}
-
-/* in content XUL */
-*|*:root {
-  --in-content-page-color: #5c616c !important;
-  --in-content-page-background: #eaeaea !important;
-  --in-content-text-color: #5c616c !important;
-  --in-content-selected-text: #fff !important;
-  --in-content-header-border-color: #c8c8c8 !important;
-  --in-content-box-background: #fbfbfb !important;
-  --in-content-box-background-odd: #f3f6fa !important;
-  --in-content-box-background-hover: #ebebeb !important;
-  --in-content-box-background-active: #dadada !important;
-  --in-content-box-border-color: #c1c1c1 !important;
-  --in-content-item-hover: rgba(0,149,221,0.25) !important;
-  --in-content-item-selected: #0095dd !important;
-  --in-content-border-highlight: #5294e2 !important;
-  --in-content-border-focus: #0095dd !important;
-  --in-content-border-color: #c1c1c1 !important;
-  --in-content-category-border-focus: 1px dotted #fff !important;
-  --in-content-category-outline-focus: 1px dotted #0a84ff;
-  --in-content-category-text: #606060 !important;
-  --in-content-category-text-active: #0c0c0d;
-  --in-content-category-text-selected: #5294e2 !important;
-  --in-content-category-text-selected-active: #fff !important;
-  --in-content-category-background: transparent !important;
-  --in-content-category-background-hover: rgba(12,12,13,0.1);
-  --in-content-category-background-active: #5294e2 !important;
-  --in-content-category-background-selected-hover: rgba(12,12,13,0.15);
-  --in-content-category-background-selected-active: rgba(12,12,13,0.2);
-  --in-content-tab-color: #5c616c !important;
-  --in-content-link-color: #0095dd !important;
-  --in-content-link-color-hover: #178ce5 !important;
-  --in-content-link-color-active: #ff9500 !important;
-  --in-content-link-color-visited: #551a8b !important;
-  --in-content-primary-button-background: #0095dd !important;
-  --in-content-primary-button-background-hover: #008acb !important;
-  --in-content-primary-button-background-active: #006b9d !important;
-  --in-content-table-border-dark-color: #d1d1d1 !important;
-  --in-content-table-header-background: #0095dd !important;
-
-  /* default blue for input and button focus*/
-  --blue-50: #5294E2 !important;
-  --blue-50-a30: rgba(82, 148, 226, 0.3) !important;
-}
-
-/* collapsible arrow head button */
-.arrowhead {
-  max-width: 38px !important;
-}
-
-/* input focus */
-html|input[type="email"]:focus,
-html|input[type="tel"]:focus,
-html|input[type="text"]:focus,
-html|input[type="password"]:focus,
-html|input[type="url"]:focus,
-html|input[type="number"]:focus,
-html|textarea:focus,
-xul|search-textbox[focused] {
-  box-shadow: 0 1px 4px 0 var(--in-content-border-active-shadow), 0 0 0 1px var(--in-content-border-active-shadow) !important;
-}
-
-/* button focus*/
-button:-moz-focusring,
-html|select:-moz-focusring,
-html|input[type="checkbox"]:-moz-focusring,
-html|input[type="color"]:-moz-focusring,
-xul|menulist:-moz-focusring {
-  outline: 1px solid var(--in-content-border-active) !important;
-  box-shadow: 0 0 0 1px var(--in-content-border-active-shadow) !important;
-}
-
-/* xul buttons and menulists */
-xul|button,
-xul|colorpicker[type="button"],
-xul|menulist {
-  -moz-appearance: none !important;
-  min-height: 30px !important;
-  color: var(--in-content-text-color) !important;
-  border: 1px solid var(--in-content-box-border-color) !important;
-  -moz-border-top-colors: none !important;
-  -moz-border-right-colors: none !important;
-  -moz-border-bottom-colors: none !important;
-  -moz-border-left-colors: none !important;
-  border-radius: 2px !important;
-  background-color: var(--in-content-box-background) !important;
-}
-
-xul|button:enabled:hover,
-xul|button:not([disabled="true"]):hover,
-xul|colorpicker[type="button"]:not([disabled="true"]):hover,
-xul|menulist:not([disabled="true"]):hover {
-  background-color: var(--in-content-box-background-hover) !important;
-}
-
-xul|button:enabled:hover:active,
-xul|button:not([disabled="true"]):hover:active,
-xul|colorpicker[type="button"]:not([disabled="true"]):hover:active,
-xul|menulist[open="true"]:not([disabled="true"]) {
-  background-color: var(--in-content-box-background-active) !important;
-}
-
-xul|button:disabled,
-xul|button[disabled="true"],
-xul|colorpicker[type="button"][disabled="true"],
-xul|menulist[disabled="true"] {
-  opacity: 0.5 !important;
-}
-
-xul|button.primary {
-  background-color: var(--in-content-primary-button-background) !important;
-  border-color: transparent !important;
-  color: var(--in-content-selected-text) !important;
-}
-
-xul|button.primary:enabled:hover,
-xul|button.primary:not([disabled="true"]):hover {
-  background-color: var(--in-content-primary-button-background-hover) !important;
-}
-
-xul|button.primary:enabled:hover:active,
-xul|button.primary:not([disabled="true"]):hover:active {
-  background-color: var(--in-content-primary-button-background-active) !important;
-}
-
-xul|colorpicker[type="button"] {
-  padding: 6px !important;
-  width: 50px !important;
-}
-
-xul|button > xul|*.button-box,
-xul|menulist > xul|*.menulist-label-box {
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-}
-
-
-/* Checkboxes and radio buttons */
-xul|checkbox {
-  margin-inline-start: 0;
-  -moz-appearance: none;
-}
-
-xul|*.checkbox-check,
-xul|input[type="checkbox"] {
-  -moz-appearance: none !important;
-  width: 16px !important;
-  height: 16px !important;
-  border: 1px solid var(--in-content-box-border-color) !important;
-  border-radius: 2px !important;
-  margin: 0 !important;
-  margin-inline-end: 10px !important;
-  background-color: #f1f1f1 !important;
-  background-image: linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  box-shadow: 0 1px 1px 0 #fff, inset 0 2px 0 0 rgba(0,0,0,0.03) !important;
-}
-
-xul|*.checkbox-check[checked] {
-  list-style-image: url("./ui/icons/check-radio/check.svg#check-inverted") !important;
-  border: 1px solid transparent !important;
-  background-color: #5294E2 !important;
-  background-image: linear-gradient(#5294E2, #5294E2) !important;
-}
-
-xul|input[type="checkbox"]:checked {
-  background-image: url("./ui/icons/check-radio/check.svg#check") !important;, linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
-}
-
-xul|checkbox[disabled="true"] > xul|*.checkbox-check,
-xul|input[type="checkbox"]:disabled {
-  opacity: 0.5 !important;
-}
-
-xul|radio {
-  margin-inline-start: 0 !important;
-  -moz-appearance: none !important;
-}
-
-xul|*.radio-check {
-  -moz-appearance: none !important;
-  width: 16px !important;
-  height: 16px !important;
-  border: 1px solid var(--in-content-box-border-color) !important;
-  border-radius: 50% !important;
-  margin-inline-end: 10px !important;
-  background-color: #f1f1f1 !important;
-  background-image: linear-gradient(#fff, rgba(255,255,255,0.80)) !important;
-  box-shadow: 0 1px 1px 0 #fff, inset 0 2px 0 0 rgba(0,0,0,0.03) !important;
-}
-
-xul|*.radio-check[selected] {
-  list-style-image: url("./ui/icons/check-radio/radio.svg#radio") !important;
-}
-
-xul|radio[disabled="true"] > xul|*.radio-check {
-  opacity: 0.5 !important;
 }
