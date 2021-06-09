@@ -7,7 +7,6 @@
 		--arrowpanel-border-radius: 3px !important;
 	}
 
-
 	.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
 	  /* width: 40px; */
 	  width: 20px !important;
@@ -15,8 +14,8 @@
 
 	/* Context Navigation Menù */
 	#context-navigation {
-	  -moz-appearance: menuitem;
-	  padding-top: 4px;
+	  -moz-appearance: menuitem !important;
+	  padding-top: 4px !important;
 	}
 
 	#context-navigation > .menuitem-iconic > .menu-iconic-left {
@@ -31,7 +30,7 @@
 	}
 	
 	/* Increase titlebar's buttons margin */
-	titlebar-buttonbox-container {
-		margin-right: 4px;
+	.titlebar-buttonbox-container {
+		margin-right: 4px !important;
 	}
 }
