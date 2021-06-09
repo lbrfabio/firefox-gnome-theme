@@ -1,14 +1,37 @@
-:root {
-	--toolbarbutton-border-radius: 3px !important;
-	--tab-border-radius: 3px !important;
-	--in-content-button-border-radius: 3px !important;
-	--toolbarbutton-border-radius: 3px !important;
-	--arrowpanel-border-radius: 3px !important;
+@-moz-document url-prefix(chrome://browser/content/){
+	:root {
+		--toolbarbutton-border-radius: 3px !important;
+		--tab-border-radius: 3px !important;
+		--in-content-button-border-radius: 3px !important;
+		--toolbarbutton-border-radius: 3px !important;
+		--arrowpanel-border-radius: 3px !important;
+	}
+
+
+	.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
+	  /* width: 40px; */
+	  width: 20px !important;
+	}
+
+	/* Context Navigation Menù */
+	#context-navigation {
+	  -moz-appearance: menuitem;
+	  padding-top: 4px;
+	}
+
+	#context-navigation > .menuitem-iconic > .menu-iconic-left {
+	  padding-inline-end: 0 !important;
+	  margin-inline-end: 0 !important;
+	}
+
+	/* Hide context menù left icons */
+	#tabContextMenu menuitem.menuitem-iconic > .menu-iconic-left,
+	#contentAreaContextMenu > menuitem > .menu-iconic-left {
+	  visibility: hidden !important;
+	}
+	
+	/* Increase titlebar's buttons margin */
+	titlebar-buttonbox-container {
+		margin-right: 4px;
+	}
 }
-
-
-.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
-  /* width: 40px; */
-  width: 20px !important;
-}
-
