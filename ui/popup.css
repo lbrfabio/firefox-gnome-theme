@@ -17,10 +17,14 @@
 	#BMB_viewBookmarksSidebar,
 	#BMB_bookmarksShowAllTop, #BMB_bookmarksShowAllTop + menuseparator,
 	#BMB_bookmarksToolbar, #BMB_unsortedBookmarks, #BMB_mobileBookmarks, 
-	#BMB_mobileBookmarks + menuseparator,
-	.PanelUI-subView menuseparator {
+	#BMB_mobileBookmarks + menuseparator {
 		display: none !important;
 	}
+	
+	/* Fix bookmarks separators*/
+	.PanelUI-subView menuseparator {
+	    appearance: none !important;
+    }
 
 	/* Remove border from menu and panels (e.g. right click menu) */
 	menupopup,
