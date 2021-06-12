@@ -26,9 +26,8 @@
 	    appearance: none !important;
     }
 
-	/* Remove border from menu and panels (e.g. right click menu) */
-	menupopup,
-	panel {
+	/* Remove border from right menu */
+	popupset > menupopup {
 		/*border: 1px solid ThreeDShadow;*/
 		border: none !important;
 	}
