@@ -5,7 +5,7 @@
 		--in-content-button-border-radius: 3px !important;
 		--toolbarbutton-border-radius: 3px !important;
 		--arrowpanel-border-radius: 3px !important;
-		--arrowpanel-menuitem-padding-block: 6px;
+		--arrowpanel-menuitem-padding-block: 6px !important;
 	}
 
 	.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
@@ -25,7 +25,7 @@
 	}
 
 	/* Hide context menù left icons */
-	#tabContextMenu menuitem.menuitem-iconic > .menu-iconic-left,
+	#tabContextMenu > menuitem.menuitem-iconic > .menu-iconic-left,
 	#contentAreaContextMenu > menuitem > .menu-iconic-left {
 	  visibility: hidden !important;
 	}
