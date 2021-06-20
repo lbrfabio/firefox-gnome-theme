@@ -25,11 +25,13 @@
 	.PanelUI-subView menuseparator {
 	    appearance: none !important;
     }
-
-	/* Remove border from right menu */
-	popupset > menupopup,
-	popupset > menupopup menupopup {
-		/*border: 1px solid ThreeDShadow;*/
-		border: none !important;
+	
+	menupopup {
+		border-width: 0px !important;
 	}
+	
+	menupopup#BMB_bookmarksPopup menupopup {
+		border-width: 1px !important;
+	}
+	
 }
